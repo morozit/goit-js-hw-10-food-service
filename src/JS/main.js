@@ -1,4 +1,5 @@
-import '../JS/theme.js';
+import menuFood from '../JSON/menu-list.json';
+import templateMenuCard from '../templates/menu.hbs';
 
-import '../JS/variables.js';
+import { refs, Theme } from '../JS/variables.js';
 
