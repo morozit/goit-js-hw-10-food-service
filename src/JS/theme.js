@@ -1,21 +1,12 @@
-import menuFood from '../JSON/menu-list.json';
-import templateMenuCard from '../templates/menu.hbs';
+import { refs, Theme } from './variables.js';
 
-import { refs, Theme } from './JS/variables.js';
-
-
-refs.menuList.insertAdjacentHTML('afterbegin', onMenuEl(menuFood));
-
-function onMenuEl(menuFood) {
-  return templateMenuCard(menuFood);
-}
-
-refs.checkbox.addEventListener('change', onChangeTheme);
+// TODO: слухач на зміні 
+refs.checkboxTheme.addEventListener('change', onChangeTheme);
 
 if (refs.savedTheme) {
   refs.body.classList.add(refs.savedTheme);
   if (refs.savedTheme === Theme.DARK) {
-    refs.checkbox.checked = true;
+    refs.checkboxTheme.checked = true;
   }
 }
 
