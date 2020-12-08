@@ -1,5 +1,6 @@
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const { TRUE } = require('node-sass');
 const WebpackBar = require('webpackbar');
 const paths = require('../utils/paths');
 
@@ -60,6 +61,12 @@ module.exports = env => ({
       {
         test: /\.html$/,
         use: 'html-loader',
+        // use: {
+        //   loader: 'html-loader',
+        //   options: {
+        //     interpolate: true,
+        //   }
+        // }
       },
       {
         test: /\.hbs$/,
