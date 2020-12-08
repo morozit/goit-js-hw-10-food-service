@@ -60,13 +60,12 @@ module.exports = env => ({
       },
       {
         test: /\.html$/,
-        use: 'html-loader',
-        // use: {
-        //   loader: 'html-loader',
-        //   options: {
-        //     interpolate: true,
-        //   }
-        // }
+        use: {
+          loader: 'html-loader',
+          options: {
+            interpolate: true,
+          }
+        }
       },
       {
         test: /\.hbs$/,
